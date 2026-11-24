@@ -1,0 +1,19 @@
+---
+title: "Validation: energy units"
+---
+
+An example validation document. It runs the package on a known case and
+compares with a reference value, so a wrong result shows up here and fails the
+render. Replace it with validations of your own code.
+
+The H₂ ground-state energy in the Born–Oppenheimer approximation is
+−1.17447 hartree (Kołos & Wolniewicz). In electronvolts that is about −31.96 eV.
+
+```{python}
+from mypackage.units import hartree_to_ev
+
+e_h2 = hartree_to_ev(-1.17447)
+print(f"H2 ground-state energy: {e_h2:.3f} eV")
+
+assert abs(e_h2 - (-31.959)) < 1e-3, "unit conversion disagrees with reference"
+```

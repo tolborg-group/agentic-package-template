@@ -1,0 +1,22 @@
+# Pixi
+.pixi/*
+!.pixi/config.toml
+
+# uv
+.venv/
+
+# Python
+__pycache__/
+*.egg-info/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+
+# Quarto
+docs/_site/
+docs/.quarto/
+**/*.quarto_ipynb*
+
+.DS_Store

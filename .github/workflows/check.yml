@@ -1,0 +1,29 @@
+name: Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: prefix-dev/setup-pixi@v0.9.3
+        with:
+          pixi-version: v0.83.0
+          cache: true
+          locked: true
+
+      - name: Lint, type check and test
+        run: pixi run check
+
+      # Runs every validation document; a failing one fails the build.
+      - name: Render docs
+        run: pixi run docs

@@ -1,0 +1,19 @@
+project:
+  type: website
+
+website:
+  title: "mypackage"
+  sidebar:
+    contents:
+      - index.qmd
+      - section: "Validation"
+        contents:
+          - validation/*.qmd
+
+format:
+  html:
+    toc: true
+
+execute:
+  # A validation document whose code fails stops the render, so CI fails too.
+  error: false

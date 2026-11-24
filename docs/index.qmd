@@ -1,0 +1,9 @@
+---
+title: "mypackage"
+---
+
+What the package is for, and the theory it implements: the working equations,
+the units, and the limits and invariants the code must satisfy.
+
+This site is shared context for you and the agent. Write the spec here before
+the code exists, and add a validation document for each piece of physics.
