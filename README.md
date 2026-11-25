@@ -30,7 +30,18 @@ every push.
 4. Fill in `CLAUDE.md`: what the project is, and your conventions (units,
    array shapes). Replace the parts in `<angle brackets>`.
 5. Delete the example code (`src/mypackage/units.py`, `tests/test_units.py`,
-   `docs/validation/units.qmd`) once you have your own.
+   `tests/test_hypothesis_finds_bug.py`, `docs/validation/units.qmd`) once you
+   have your own.
+
+## Seeing hypothesis find a bug
+
+`tests/test_hypothesis_finds_bug.py` computes Boltzmann populations with the
+textbook formula, `exp(-E/kT) / sum(exp(-E/kT))`. A hand-written test with
+small relative energies passes. A hypothesis test that tries energies on the
+scale of DFT total energies fails, and is marked `xfail` so the suite stays
+clean. Delete its `@pytest.mark.xfail` line and run `pixi run test` to see the
+smallest failing input hypothesis found. The file also has a fixed version
+that passes the same test.
 
 ## Layout
 
