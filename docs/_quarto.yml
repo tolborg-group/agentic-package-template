@@ -7,8 +7,7 @@ website:
     contents:
       - index.qmd
       - section: "Validation"
-        contents:
-          - validation/*.qmd
+        contents: validation/*.qmd
 
 format:
   html:
