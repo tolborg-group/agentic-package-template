@@ -7,7 +7,7 @@ compares with a reference value, so a wrong result shows up here and fails the
 render. Replace it with validations of your own code.
 
 The H₂ ground-state energy in the Born–Oppenheimer approximation is
-−1.17447 hartree (Kołos & Wolniewicz). In electronvolts that is about −31.96 eV.
+−1.17447 hartree. In electronvolts that is about −31.96 eV.
 
 ```{python}
 from mypackage.units import hartree_to_ev
