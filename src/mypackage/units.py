@@ -7,7 +7,7 @@ HARTREE_IN_EV = 27.211386245988
 """CODATA 2018 value of one hartree in electronvolts."""
 
 
-# Try removing "ArrayLike" and then run pixi r typecheck. 
+# Try removing "ArrayLike" and then run pixi r typecheck.
 def ev_to_hartree(energy: ArrayLike) -> NDArray[np.float64]:
     """Convert energies from electronvolts to hartree."""
     return np.asarray(energy, dtype=np.float64) / HARTREE_IN_EV
